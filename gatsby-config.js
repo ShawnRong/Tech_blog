@@ -6,7 +6,9 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-material-ui',
+    `gatsby-plugin-material-ui`,
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -54,6 +56,15 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `#2196f3`,
+        // Disable the loading spinner.
+        showSpinner: false,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

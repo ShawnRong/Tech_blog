@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Navigator from '../components/navigator'
 import Chip from '@material-ui/core/Chip'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'

@@ -6,7 +6,6 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import Layout from '../layouts/index'
 
-// import Layout from "../components/layout"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 
@@ -30,7 +29,7 @@ const IndexPage = () => (
               <ListItemText primary="日志" secondary="/posts/" />
             </ListItem>
           </Link>
-          <a href="https://www.github.com/shawnrong" target="_blank">
+          <a href="https://www.github.com/shawnrong" target="_blank" rel="noopener noreferrer">
             <ListItem button>
               <ListItemText
                 primary="GitHub"

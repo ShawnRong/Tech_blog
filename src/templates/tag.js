@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import Layout from '../layouts/tag'
 
-const Tags = ({ pathContext, data }) => {
-  const { tag } = pathContext
+const Tags = ({ pageContext, data }) => {
+  const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `包含标签"${tag}" 的 ${totalCount}篇日志`
 
@@ -28,6 +29,12 @@ const Tags = ({ pathContext, data }) => {
     </Layout>
   )
 }
+
+Tags.propTypes = {
+  pageContext: PropTypes.object,
+  data: PropTypes.object,
+}
+
 export default Tags
 
 export const pageQuery = graphql`

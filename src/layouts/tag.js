@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 import Navigator from '../components/navigator'
 
 const Layout = ({ children }) => {
@@ -13,7 +12,7 @@ const Layout = ({ children }) => {
           maxWidth: '80%',
         }}
       >
-        { children }
+        {children}
       </div>
     </div>
   )

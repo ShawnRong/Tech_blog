@@ -9,8 +9,8 @@ const path = require(`path`)
 // const { graphql } = require(`gatsby`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.onCreatePage = async ({ page, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+exports.onCreatePage = async ({ page, actions }) => {
+  const { createPage } = actions
   return new Promise((resolve, reject) => {
     if (page.path.match(/^\/posts/)) {
       // It's assumed that `landingPage.js` exists in the `/layouts/` directory
@@ -27,8 +27,8 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
   })
 }
 
-exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` })
     createNodeField({
@@ -39,8 +39,8 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   }
 }
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
   return new Promise((resolve, reject) => {
     graphql(`
       {

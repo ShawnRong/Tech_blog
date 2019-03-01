@@ -14,7 +14,7 @@ class BackTop extends React.Component {
         style={{ position: 'fixed', bottom: '10%', right: '10%' }}
         onClick={() => this.backToTop()}
       >
-        <Icon style={{ height: 'auto' }}>arrow_upward</Icon>
+        <Icon style={{ lineHeight: '1em' }}>arrow_upward</Icon>
       </IconButton>
     )
   }
