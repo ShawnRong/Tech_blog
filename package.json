@@ -4,6 +4,7 @@
   "description": "Personal blog",
   "version": "0.1.0",
   "author": "Shawn Rong<rongshawn@gmail.com>",
+  "homepage": "https://shawnrong.xyz",
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "gatsby": "^2.1.18",
@@ -17,6 +18,7 @@
     "gatsby-plugin-sharp": "^2.0.22",
     "gatsby-plugin-transition-link": "^1.5.1",
     "gatsby-plugin-typography": "^2.2.7",
+    "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-prismjs": "^3.2.4",
     "gatsby-source-filesystem": "^2.0.23",
     "gatsby-transformer-remark": "^2.3.0",
